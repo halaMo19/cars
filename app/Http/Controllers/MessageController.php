@@ -12,7 +12,9 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $Messages = ContactUs::get();
+
+        return view('Messages', compact('Messages'));
     }
 
     /**
